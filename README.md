@@ -36,8 +36,6 @@ This app will consist of a single screen with a Greetings modal (welcome screen)
 
 ![wireframes](images/wireframe_saladBar_modal.png)
 ![wireframes](images/wireframe_saladBar.png)
-
-Similar layout to the following:
 ![wireframes](images/Screen Shot 2017-07-31 at 12.48.14 PM.png)
 
 ### Architecture and Technologies
