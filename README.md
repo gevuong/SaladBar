@@ -34,9 +34,13 @@ In addition, this project will include:
 
 This app will consist of a single screen with a Greetings modal (welcome screen) that first displays the instructions and game controls before the start of the game. Once game begins, the game UI will display and the modal closes. There will be nav links to my Github and LinkedIn accounts. Game controls will include left and right directional buttons.
 
+### Greetings Modal
 ![wireframes](images/wireframe_saladBar_modal.png)
+### Game UI
 ![wireframes](images/wireframe_saladBar.png)
+### Screenshot of High Burger mobile app (similar layout)
 ![wireframes](images/Screen Shot 2017-07-31 at 12.48.14 PM.png)
+
 
 ### Architecture and Technologies
 
