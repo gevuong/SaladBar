@@ -39,7 +39,7 @@ This app will consist of a single screen with a Greetings modal (welcome screen)
 ### Game UI
 ![wireframes](images/wireframe_saladBar.png)
 ### Screenshot of High Burger mobile app (similar layout)
-![wireframes](images/Screen Shot 2017-07-31 at 12.48.14 PM.png)
+![wireframes](images/ScreenshotHighBurger.png)
 
 
 ### Architecture and Technologies
