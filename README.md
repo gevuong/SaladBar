@@ -1,16 +1,17 @@
-## Salad Bar (Inspired by Agario and High Burger)
+## Salad Bar
 
 ### Background
 
 **NB**: You'll probably want to keep the Background section for your production Readme as well.
 
-Salad Bar, inspired by Agario and High Burger/Tower Stacker, involves the concept of collecting salad ingredients until the specified salad bowl is made. As more salad ingredients are made, the size of the salad bowl enlarges, making it more challenging to collect the desired ingredients. Salad Bar follows these rules:
+Salad Bar, inspired by Agario, Scoop, and Tower Stacker, involves the concept of collecting salad ingredients until the specified salad bowl is made. As more salad ingredients are collected, the size of the salad bowl enlarges, making it more challenging to collect the desired ingredients. Salad Bar follows these rules:
 
 1) Collect desired salad ingredients
-2) Avoid stacking non-salad ingredients (i.e. cat, pizza, bird poo)
+2) Avoid stacking non-salad ingredients (i.e. cat, pizza, etc.)
 3) Finish salad with all the required ingredients to create salad type.
 
-This simulation will incorporate several of those variations, outlined in the **Functionality & MVP** and **Bonus Features** sections.
+This simulation will incorporate MVPs outlined in the **Functionality & MVP** and if time permits, the **Bonus Features** sections.
+
 
 ### Functionality & MVP
 
@@ -19,7 +20,7 @@ With this Salad Bar simulator, users will be able to:
 - [ ] Start and reset the game
 - [ ] Ability to move salad bowl horizontally
 - [ ] Catch falling salad ingredients in salad bowl, and avoid non-salad ingredients (like pizza)
-- [ ] Bowl enlarges as it collects more ingredients
+- [ ] Bowl enlarges as it collects more ingredients (similar to when Mario gets a mushroom and becomes full size)
 
 In addition, this project will include:
 
@@ -31,7 +32,7 @@ In addition, this project will include:
 This app will consist of a single screen with game board, game controls, and nav links to the Github, my LinkedIn,
 and the About modal. Game controls will include left and right directional buttons. There will be a modal that displays the rules before start of game.
 
-![wireframes](images/js_wireframe.jpeg)
+![wireframes](images/wireframe_saladBar.png)
 
 ### Architecture and Technologies
 
@@ -43,13 +44,14 @@ This project will be implemented with the following technologies:
 - `Easel.js` with `HTML5 Canvas` for DOM manipulation and rendering,
 - Webpack to bundle and serve up the various scripts.
 
-In addition to the webpack entry file, there will be three scripts involved in this project:
+In addition to the webpack entry file, there will be 5 scripts involved in this project:
 
-`board.js`: this script will handle the logic for creating and updating the necessary `Easel.js` elements and rendering them to the DOM.
+`game.js`: this script will handle the logic for creating and updating the necessary `Easel.js` elements and rendering them to the DOM.
 
-`automata.js`: this script will handle the logic behind the scenes.  An Automata object will hold a `type` (hexagon, triangle, or square) and a 2D array of `Cell`s.  It will be responsible for doing neighbor checks for each `Cell` upon iteration and updating the `Cell` array appropriately.
-
-`cell.js`: this lightweight script will house the constructor and update functions for the `Cell` objects.  Each `Cell` will contain a `type` (hexagon, triangle, or square) and an `aliveState` (`true` or `false`).
+`game_view.js`
+`salad_bowl.js`
+`moving_object.js`
+`salad_ingredients.js`
 
 ### Implementation Timeline
 
@@ -58,22 +60,20 @@ In addition to the webpack entry file, there will be three scripts involved in t
 - Get a green bundle with `webpack`
 - Learn enough `Easel.js` to render an object to the `Canvas` element
 
-**Day 2**: Dedicate this day to learning the `Easel.js` API.  First, build out the `Cell` object to connect to the `Board` object.  Then, use `board.js` to create and render at least the square grid, ideally all 3 grid types.  Build in the ability to toggle the live/dead states on click for each cell.  Goals for the day:
+**Day 2**: Dedicate this day to learning the `Easel.js` API.  First, build out the `Cell` object to connect to the `game` object. 
 
-- Complete the `cell.js` module (constructor, update functions)
+- Complete the `game.js` module (constructor, update functions)
 - Render a square grid to the `Canvas` using `Easel.js`
-- Make each cell in the grid clickable, toggling the state of the square on click
-- Do the same for triangular and hexagonal grids
 
-**Day 3**: Create the automata logic backend.  Build out modular functions for handling the different grid types along with their unique neighbor checks and rule sets.  Incorporate the automata logic into the `Board.js` rendering.  Goals for the day:
 
-- Export an `Automata` object with correct type and handling logic
+**Day 3**: Create the logic backend.  Build out modular functions for handling the different grid types along with their unique neighbor checks and rule sets.  Incorporate the logic into the `game.js` rendering.  Goals for the day:
+
 - Have a functional grid on the `Canvas` frontend that correctly handles iterations from one generation of the game to the next
 
 
 **Day 4**: Install the controls for the user to interact with the game.  Style the frontend, making it polished and professional.  Goals for the day:
 
-- Create controls for game speed, stop, start, reset, and shape type
+- Create controls for start, reset
 - Have a styled `Canvas`, nice looking controls and title
 
 
