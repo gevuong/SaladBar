@@ -1,25 +1,25 @@
-## Ensalada (Inspired by Agario and Burger Stacker)
+## Salad Bar (Inspired by Agario and High Burger)
 
 ### Background
 
 **NB**: You'll probably want to keep the Background section for your production Readme as well.
 
-Conway's Game of Life is a classic example of the concept of **cellular automata**.  The original GoL is a 0-player game that plays out on a rectangular grid.  Each cell on the grid is either dead or alive when the game begins.  On the next iteration of the game (called a "generation") the cells follow these rules:
+Salad Bar, inspired by Agario and High Burger/Tower Stacker, involves the concept of collecting salad ingredients until the specified salad bowl is made. As more salad ingredients are made, the size of the salad bowl enlarges, making it more challenging to collect the desired ingredients. Salad Bar follows these rules:
 
-1) Any live cell with 2 or 3 live neighbors (defined to be the eight cells surrounding it) stays alive,
-2) Any dead cell with exactly 3 neighbors will come to life,
-3) Any live cell with less than 2 neighbors or more than 3 neighbors will die.
+1) Collect desired salad ingredients
+2) Avoid stacking non-salad ingredients (i.e. cat, pizza, bird poo)
+3) Finish salad with all the required ingredients to create salad type.
 
-There are many variations on the GoL.  This simulation will incorporate several of those variations, outlined in the **Functionality & MVP** and **Bonus Features** sections.
+This simulation will incorporate several of those variations, outlined in the **Functionality & MVP** and **Bonus Features** sections.
 
 ### Functionality & MVP
 
-With this Ensalada simulator, users will be able to:
+With this Salad Bar simulator, users will be able to:
 
-- [ ] Start, pause, and reset the game board
-- [ ] Select squares to be alive in the initial state
-- [ ] Choose from preset demo initial states
-- [ ] Toggle between square, triangular and hexagonal grids with corresponding rule sets
+- [ ] Start and reset the game
+- [ ] Ability to move salad bowl horizontally
+- [ ] Catch falling salad ingredients in salad bowl, and avoid non-salad ingredients (like pizza)
+- [ ] Bowl enlarges as it collects more ingredients
 
 In addition, this project will include:
 
@@ -29,7 +29,7 @@ In addition, this project will include:
 ### Wireframes
 
 This app will consist of a single screen with game board, game controls, and nav links to the Github, my LinkedIn,
-and the About modal.  Game controls will include Start, Stop, and Reset buttons as well as a slider to control the speed.  On the left, three clickable shapes will be used to toggle between the types of grids available.  On the right, there will be three (or more) clickable gradient-filled rectangles used to toggle between color schemes (see Bonus Features).  Additionally, a drop-down will be added to the Controls to toggle between different rule sets (again, see Bonus Features).
+and the About modal. Game controls will include left and right directional buttons. There will be a modal that displays the rules before start of game.
 
 ![wireframes](images/js_wireframe.jpeg)
 
@@ -75,13 +75,12 @@ In addition to the webpack entry file, there will be three scripts involved in t
 
 - Create controls for game speed, stop, start, reset, and shape type
 - Have a styled `Canvas`, nice looking controls and title
-- If time: include buttons on the side to toggle the color scheme of the cells
 
 
 ### Bonus features
 
 There are many directions this cellular automata engine could eventually go.  Some anticipated updates are:
 
-- [ ] Add options for different rule sets
-- [ ] Add multiple choices for starting states that are interesting
-- [ ] Explore multi-state versions of the game, such as the ones outlined [here](https://cs.stanford.edu/people/eroberts/courses/soco/projects/2008-09/modeling-natural-systems/gameOfLife2.html)
+- [ ] Incorporate a score count
+- [ ] User has ability to select a salad type
+- [ ] Add calorie count as health bar
