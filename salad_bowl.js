@@ -3,5 +3,5 @@ function saladBowl () {
 
   this.show = function() {
     rect(this.x, 20, 20, 20, 20);
-  }
+  };
 }
