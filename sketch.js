@@ -3,13 +3,19 @@ var bowl;
 
 // CONSTRUCTOR FUNCTION
 function setup() {
-  createCanvas(600, 400);
+  createCanvas(500, 600);
   bowl = new saladBowl();
 }
 
 function draw() {
   background(51);
   bowl.show();
+}
+
+function keyReleased() {
+  if (key != " ") {
+    bowl.setDir(0);
+  }
 }
 
 function keyPressed() {
