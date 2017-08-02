@@ -10,18 +10,17 @@ function setup() {
 function draw() {
   background(51);
   bowl.show();
+  bowl.move(); // always being called
 }
 
 function keyReleased() {
-  if (key != " ") {
-    bowl.setDir(0);
-  }
+  bowl.setDir(0);
 }
 
 function keyPressed() {
   if (keyCode === RIGHT_ARROW) {
-    bowl.move(1);
+    bowl.setDir(1); // the idea is that bowl is always moving, but you're only setting direction when key is pressed
   } else if (keyCode === LEFT_ARROW) {
-    bowl.move(-1);
+    bowl.setDir(-1);
   }
 }
