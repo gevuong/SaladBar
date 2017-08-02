@@ -1,16 +1,20 @@
 // Using p5 JS framework which has a setup and draw function so it starts the program and draws loops for animation over and over again
 var bowl;
+var ingredient;
 
 // CONSTRUCTOR FUNCTION
 function setup() {
   createCanvas(500, 600);
   bowl = new saladBowl();
+  ingredient = new saladIngredient();
 }
 
 function draw() {
   background(51);
   bowl.show();
   bowl.move(); // always being called
+  ingredient.show();
+
 }
 
 function keyReleased() {

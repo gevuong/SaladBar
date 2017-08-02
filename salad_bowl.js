@@ -4,7 +4,8 @@ function saladBowl () {
 
   this.show = function() {
     fill(255);
-    rect(this.x, height - 20, 20, 20);
+    arc(this.x, height - 35, 70, 70, 0, PI, OPEN);
+    // rect(this.x, height - 20, 20, 20);
   };
 
   this.setDir = function(dir) {
