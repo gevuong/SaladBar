@@ -21,9 +21,9 @@ function draw() {
   for (var i = 0; i < drops.length; i++) {
     drops[i].show();
     drops[i].move();
-    if (drops[i].hits(ingredient)) {
+    if (drops[i].hits(bowl)) {
       console.log("hits");
-      ingredient.grow();
+      bowl.grow();
       drops[i].destroy();
     }
   }
@@ -33,14 +33,6 @@ function draw() {
       drops.splice(i, 1);
     }
   }
-  // if (drops.hits(ingredient)) {
-  //   let count = 0;
-  //   if (count === 0) {
-  //     ingredient.grow();
-  //     console.log("hits");
-  //   }
-  //     count++;
-  // }
 }
 
 function keyReleased() {
@@ -49,7 +41,7 @@ function keyReleased() {
 
 function keyPressed() {
   if (key === " ") {
-    var drop = new Drop(bowl.x, height); // height is bottom of the screen
+    var drop = new Drop(ingredient.x, ingredient.y); // height is bottom of the screen
     drops.push(drop);
   }
   if (keyCode === RIGHT_ARROW) {

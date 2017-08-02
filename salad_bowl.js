@@ -1,10 +1,14 @@
 function saladBowl () {
   this.x = width / 2; // starts at middle of window
+  this.y = height - 40;
   this.xdir = 0;
-  // this.y = 0;
+  this.width = 35;
+  this.height = 35;
+
   this.show = function() {
     fill(255);
-    arc(this.x, height - 35, 70, 70, 0, PI, OPEN);
+    arc(this.x, this.y, this.width * 2, this.height * 2, 0, PI, OPEN);
+    // arc(x-coord, y-coord, width, height, angle to start, angle to stop, mode)
   };
 
   this.setDir = function(dir) {
@@ -12,7 +16,8 @@ function saladBowl () {
   };
 
   this.grow = function() {
-    this.y = this.y + 5;
+    this.width = this.width + 3;
+    this.height = this.height + 1;
   };
 
   this.move = function(dir) {
