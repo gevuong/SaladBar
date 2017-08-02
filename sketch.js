@@ -1,19 +1,23 @@
 // Using p5 JS framework which has a setup and draw function so it starts the program and draws loops for animation over and over again
-var bowl;
-var ingredient;
-var drops = [];
+let bowl;
+let ingredient;
+let drops = [];
+// let img;
 
 // CONSTRUCTOR FUNCTION
 function setup() {
   createCanvas(500, 600);
   bowl = new saladBowl();
   ingredient = new saladIngredient();
+  // img = loadImage("images/background.png");
   // drops = new Drop(width / 2, height / 2);
 }
 
 // fcn is always being called
 function draw() {
   background(51);
+  // image(img, 0, 0);
+  // image(img, 0, height / 2, img.width, img.height);
   bowl.show();
   bowl.move();
   ingredient.show();
@@ -27,6 +31,7 @@ function draw() {
       drops[i].destroy();
     }
   }
+
   // want to delete drop beginning at the end of the array
   for (var i = drops.length - 1; i >= 0; i--) {
     if (drops[i].toDelete) {

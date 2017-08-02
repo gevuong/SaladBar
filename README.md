@@ -21,7 +21,7 @@ With this Salad Bar simulator, users will be able to:
 
 - [ ] Start and reset the game
 - [ ] Move salad bowl horizontally from one side of map to the other
-- [ ] Catch falling salad ingredients in salad bowl, and avoid non-salad ingredients (like pizza)
+- [ ] Catch falling salad ingredients in salad bowl, and avoid non-salad ingredients
 - [ ] Bowl enlarges as it collects more ingredients
 
 In addition, this project will include:
@@ -49,14 +49,14 @@ This app will consist of a single screen with a Greetings modal (welcome screen)
 This project will utilize the following technologies:
 
 - Vanilla JavaScript overall structure and game logic,
-- `EaselJS` with `HTML5 Canvas` for DOM manipulation and rendering,
+- `p5.js` library
 - Webpack to bundle the various scripts.
 
 In addition to the webpack entry file, there will be 5 scripts involved in this project:
 
-`main.js`: this script will handle the logic for creating and updating the necessary `Easel.js` elements and rendering them to the DOM.
+`main.js`: this script will handle the logic for creating and updating the necessary `sketch.js` elements and rendering them to the DOM.
 
-`Easel.js`
+`sketch.js`
 `main.js`
 `board.js`
 `salad_bowl.js`

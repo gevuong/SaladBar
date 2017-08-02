@@ -6,13 +6,13 @@ function saladBowl () {
   this.height = 35;
 
   this.show = function() {
-    fill(255);
+    fill(225);
     arc(this.x, this.y, this.width * 2, this.height * 2, 0, PI, OPEN);
     // arc(x-coord, y-coord, width, height, angle to start, angle to stop, mode)
   };
 
   this.setDir = function(dir) {
-      this.xdir = dir;
+    this.xdir = dir;
   };
 
   this.grow = function() {
