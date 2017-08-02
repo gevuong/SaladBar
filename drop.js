@@ -2,7 +2,8 @@ function Drop(x, y) {
   this.x = x;
   this.y = y;
   this.r = 7;
-
+  this.toDelete = false;
+  
   this.show = function() {
     fill(100, 255, 100);
     ellipse(this.x, this.y, this.r * 2, this.r * 2);
@@ -17,9 +18,9 @@ function Drop(x, y) {
     }
   };
 
-  // this.destroy = function() {
-  //   this.toDelete = true;
-  // };
+  this.destroy = function() {
+    this.toDelete = true;
+  };
 
   this.move = function() {
     this.y = this.y - 3; // - 1 moves drop up

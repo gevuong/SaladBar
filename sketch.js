@@ -21,16 +21,26 @@ function draw() {
   for (var i = 0; i < drops.length; i++) {
     drops[i].show();
     drops[i].move();
-  }
-
-  if (drops.hits(ingredient)) {
-    let count = 0;
-    if (count === 0) {
-      ingredient.grow();
+    if (drops[i].hits(ingredient)) {
       console.log("hits");
+      ingredient.grow();
+      drops[i].destroy();
     }
-      count++;
   }
+  // want to delete drop beginning at the end of the array
+  for (var i = drops.length - 1; i >= 0; i--) {
+    if (drops[i].toDelete) {
+      drops.splice(i, 1);
+    }
+  }
+  // if (drops.hits(ingredient)) {
+  //   let count = 0;
+  //   if (count === 0) {
+  //     ingredient.grow();
+  //     console.log("hits");
+  //   }
+  //     count++;
+  // }
 }
 
 function keyReleased() {
@@ -39,7 +49,7 @@ function keyReleased() {
 
 function keyPressed() {
   if (key === " ") {
-    var drop = new Drop(width / 2, height / 2); // height is bottom of the screen
+    var drop = new Drop(bowl.x, height); // height is bottom of the screen
     drops.push(drop);
   }
   if (keyCode === RIGHT_ARROW) {
