@@ -73,7 +73,7 @@ In addition to the webpack entry file, there will be 5 scripts involved in this 
 
 **Day 2**: Continue learning EaselJS. Be able to create salad bowl object and one salad ingredient. Test to see if falling object can be rendered. Continue researching.
 
-- Render more components to the `Canvas` using `Easel.js`.
+- Render more components to the `Canvas` using `p5.js`.
 - Have salad bowl move horizontally.
 - Begin setup of the board and layout of UI.
 
