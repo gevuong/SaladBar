@@ -12,11 +12,11 @@ function saladIngredient() {
     // ellipse(this.x, this.y, this.r * 2, this.r * 2);
   };
 
-  this.grow = function() {
-    // this.r = this.r + 1;
-    this.width = this.width + 2;
-    this.height = this.height + 1;
-  };
+  // this.grow = function() {
+  //   // this.r = this.r + 1;
+  //   this.width = this.width + 2;
+  //   this.height = this.height + 1;
+  // };
 
   this.setDir = function(dir) {
       this.xdir = dir;

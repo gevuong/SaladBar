@@ -1,6 +1,11 @@
-function Drop(x, y) {
-  this.x = x;
-  this.y = y;
+function Drop() {
+  // this.x = x;
+  // this.y = y;
+
+  this.x = random(width);
+  this.y = random(-500, -50);
+  this.yspeed = random(2, 5);
+
   this.r = 7;
   this.toDelete = false;
 
@@ -9,6 +14,10 @@ function Drop(x, y) {
     // ellipse(this.x, this.y, this.r * 2, this.r * 2);
     ellipse(this.x, this.y, this.r * 5, this.r * 1.5);
   };
+
+  // this.fall = function() {
+  //   this.y = this.y + this.yspeed;
+  // }
 
   this.hits = function(ingredient) {
     // var d = dist(this.x, this.y, ingredient.x, ingredient.y);
@@ -27,7 +36,11 @@ function Drop(x, y) {
     this.toDelete = true;
   };
 
-  this.move = function() {
+  this.fall = function() {
     this.y = this.y + 3; // - 1 moves drop up
+
+    if (this.y > height) {
+      this.y = random(-500, -50);
+    }
   };
 }

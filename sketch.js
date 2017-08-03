@@ -10,7 +10,10 @@ function setup() {
   bowl = new saladBowl();
   ingredient = new saladIngredient();
   // img = loadImage("images/background.png");
-  // drops = new Drop(width / 2, height / 2);
+
+  for (var i = 0; i < 6; i++) {
+    drops[i] = new Drop()
+  }
 }
 
 // fcn is always being called
@@ -20,11 +23,11 @@ function draw() {
   // image(img, 0, height / 2, img.width, img.height);
   bowl.show();
   bowl.move();
-  ingredient.show();
+  // ingredient.show();
 
   for (var i = 0; i < drops.length; i++) {
     drops[i].show();
-    drops[i].move();
+    drops[i].fall();
     if (drops[i].hits(bowl)) {
       console.log("hits");
       bowl.grow();
@@ -45,10 +48,10 @@ function keyReleased() {
 }
 
 function keyPressed() {
-  if (key === " ") {
-    var drop = new Drop(ingredient.x, ingredient.y); // height is bottom of the screen
-    drops.push(drop);
-  }
+  // if (key === " ") {
+  //   var drop = new Drop(ingredient.x, ingredient.y); // height is bottom of the screen
+  //   drops.push(drop);
+  // }
   if (keyCode === RIGHT_ARROW) {
     bowl.setDir(1); // the idea is that bowl is always moving, but you're only setting direction when key is pressed
   } else if (keyCode === LEFT_ARROW) {
