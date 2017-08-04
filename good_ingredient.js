@@ -12,7 +12,8 @@ function goodIngredient() {
   this.show = function() {
     fill(100, 255, 100);
     // ellipse(this.x, this.y, this.r * 2, this.r * 2);
-    ellipse(this.x, this.y, this.r * 5, this.r * 1.5);
+    image(img, this.x, this.y);
+    // ellipse(this.x, this.y, this.r * 5, this.r * 1.5);
   };
 
   // this.fall = function() {
@@ -38,7 +39,7 @@ function goodIngredient() {
 
   this.fall = function() {
     this.y = this.y + 3; // - 1 moves drop up
-    // console.log(height);
+    console.log(height);
     if (this.y > height) {
       this.y = random(-500, -50);
     }

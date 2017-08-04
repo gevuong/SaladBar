@@ -16,7 +16,7 @@ function saladBowl () {
   };
 
   this.grow = function() {
-    this.width = this.width + 4;
+    this.width = this.width + 6;
     this.height = this.height + 1;
   };
 
