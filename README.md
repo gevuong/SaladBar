@@ -1,9 +1,8 @@
 ## Salad Bar
 
 [Play SaladBar!](https://gevuong.github.io/SaladBar/)
-### Background
 
-**NB**: You'll probably want to keep the Background section for your production Readme as well.
+### Background
 
 Salad Bar, inspired by Agario, Scoop, and my daily lunch recipe, involves collecting falling salad ingredients until all salad ingredients are made. As ingredients continue to fall from the salad bar, it is the salad bowl holder's duty to catch the necessary ingredients. But...be careful, falling items that do not belong in the salad bowl must be avoided.
 
@@ -17,11 +16,7 @@ With the Salad Bar simulator, users are able to:
 - [ ] Start and reset the game
 - [ ] Move salad bowl horizontally from one side of map to the other
 - [ ] Catch falling salad ingredients in salad bowl, and dodge non-salad ingredients
-- [ ] Bowl enlarges as it collects more ingredients
-
-In addition, this project include:
-
-- [ ] Rules of the game, with a start button, and a brief paragraph explaining the game.
+- [ ] Bowl enlarges as you collects more ingredients
 
 
 ### Game User Interface
@@ -38,14 +33,17 @@ This project utilizes the following technologies:
 
 5 scripts involved in this project:
 
-`main.js`: this script will handle the logic for creating and updating the necessary `sketch.js` elements and rendering them to the DOM.
+`sketch.js`: this script will handle the logic for creating and updating the necessary objects and rendering them to canvas.
 
 `sketch.js`
-`main.js`
-`board.js`
 `salad_bowl.js`
-`salad_ingredients.js`
+`good_ingredient.js`
+`bad_ingredient.js`
+`special_ingredient.js`
 
+
+### Additional Resources
+[p5 library](https://p5js.org/)
 
 ### Future Direction
 Some anticipated updates are:
