@@ -64,6 +64,8 @@ function draw() {
     if (growCount === goodIngredients.length) {
       gameOver();
 
+      let elem = document.getElementById('game-over');
+
       console.log("YOU WIN!");
     }
   }
