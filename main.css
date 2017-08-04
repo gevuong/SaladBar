@@ -5,6 +5,7 @@ body {
 }
 
 .game-rules-container {
+  /*position: relative;*/
   color: #115511;
   font-family: Helvetica, Arial, sans-serif;
   background-color: #dddddd;
@@ -19,7 +20,25 @@ body {
   display: none;
 }
 
-#game-over {
-  position: absolute;
-  z-index: 100:
+#you-lose {
+  color: #115511;
+  /*position: absolute;*/
+  z-index: 100;
+  text-align: center;
+  /*left: 174%;*/
+}
+
+#you-win {
+  color: #115511;
+  /*position: absolute;*/
+  z-index: 100;
+  text-align: center;
+  /*left: 174%;*/
+}
+#start-game {
+  color: #115511;
+  /*position: absolute;*/
+  z-index: 100;
+  text-align: center;
+  /*left: 174%;*/
 }

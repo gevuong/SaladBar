@@ -14,32 +14,44 @@
     <script src="special_ingredient.js" type="text/javascript"></script>
   <style> body {padding: 0; margin: 0;} </style>
   </head>
+
   <body>
-    <div class="hidden" id="game-over">
-       <h1> GAME OVER </h1>
-    </div>
     <div class="game-rules-container">
+      <div class="hidden" id="you-lose">
+         <h1> GAME OVER! PRESS SPACEBAR TO RESTART </h1>
+      </div>
+      <div class="hidden" id="you-win">
+         <h1> YOU WON! PRESS SPACEBAR TO RESTART </h1>
+      </div>
+      <div class="hidden" id="start-game">
+         <h1> PRESS SPACEBAR TO BEGIN </h1>
+      </div>
+    </br>
+
       <h2>
         SALADBAR
       </h2>
-        <div>
-          <p>
-            <ul>
+        <div class="rules">
+
+            <ul class="rules-list">
               RULES
               <li>
-                1. press ENTER to restart game.
+                Press SPACEBAR to start and restart game.
               </li>
+            </br>
               <li>
-                2. Collect salad ingredients (spinach, tomatoes). As each ingredient is collected, the salad bowl grows.
+                Use RIGHT_ARROW and LEFT_ARROW to collect falling salad ingredients (spinach, tomatoes).
               </li>
+              </br>
               <li>
-                3. Avoid non-salad ingredients (pizza).
+                If you collect a non-salad ingredient, you lose.
               </li>
+              </br>
               <li>
-                4. Mushrooms help shrink the salad bowl back to its original size.
+                Mushrooms are powerup ingredients.
               </li>
             </ul>
-          </p>
+
         </div>
     </div>
   </body>

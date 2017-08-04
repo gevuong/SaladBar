@@ -26,8 +26,9 @@ function setup() {
 
   // let button = createButton("RESET GAME");
   // button.mousePressed(resetGame);
-
-  // noLoop();
+  let elem = document.getElementById('start-game');
+  elem.classList.remove("hidden");
+  noLoop();
 }
 
 function resetGame() {
@@ -64,10 +65,11 @@ function draw() {
     if (growCount === goodIngredients.length) {
       gameOver();
 
-      let elem = document.getElementById('game-over');
-
+      let elem = document.getElementById('you-win');
+      elem.classList.remove("hidden");
       console.log("YOU WIN!");
     }
+
   }
 
   for (let j = 0; j < badIngredients.length; j++) {
@@ -78,6 +80,8 @@ function draw() {
       console.log("GAME OVER");
       // let button = createButton("RESET GAME");
       // button.mousePressed(resetGame);
+      let elem = document.getElementById('you-lose');
+      elem.classList.remove("hidden");
     }
   }
 
@@ -87,7 +91,6 @@ function draw() {
     if (specialIngredients[k].hits(bowl)) {
       specialIngredients[k].destroy();
       bowl.shrink();
-      // console.log("GAME OVER");
     }
   }
 
@@ -130,13 +133,19 @@ function keyPressed() {
   //   goodIngredients.push(drop);
   // }
 
-  if (keyCode === ENTER) {
-    console.log("ENTER");
+  if (key === " ") {
+    console.log("SPACEBAR");
+
     setup();
-    // resetGame();
-    // draw();
+    let startGame = document.getElementById('start-game');
+    startGame.classList.add("hidden");
+    let win = document.getElementById('you-win');
+    win.classList.add("hidden");
+    let lose = document.getElementById('you-lose');
+    lose.classList.add("hidden");
     loop();
   }
+
   if (keyCode === RIGHT_ARROW) {
     bowl.setDir(1); // the idea is that bowl is always moving, but you're only setting direction when key is pressed
   } else if (keyCode === LEFT_ARROW) {

@@ -28,10 +28,8 @@ function saladBowl () {
   this.move = function() {
     console.log(this.x);
     console.log(this.width);
-    if (this.x <= this.width) {
-      this.x = this.setDir(1);
-    } else if (this.x >= 500 - this.width) {
-      this.x = this.setDir(-1);
+    if (this.x <= this.width && this.xdir === -1) {
+    } else if (this.x >= 500 - this.width && this.xdir === 1) {
     } else {
       this.x += this.xdir * 3;
     }
