@@ -2,7 +2,7 @@ function specialIngredient() {
   // this.x = x;
   // this.y = y;
 
-  this.x = random(width - 20);
+  this.x = random(width - 30);
   this.y = random(-500, -50);
   this.yspeed = random(2, 5);
 
@@ -25,7 +25,7 @@ function specialIngredient() {
     // if (d < this.r + ingredient.r) { // if sum of radius of drop and ingredient is greater than relative distance, then drop is within ingredient
     var d = dist(this.x, this.y, bowl.x, bowl.y);
     // console.log(d);
-    if (d < this.r + bowl.width / 2) { // if sum of radius of drop and ingredient is greater than relative distance, then drop is within ingredient
+    if (d < 45 / 2 + bowl.width / 2) { // if sum of radius of drop and ingredient is greater than relative distance, then drop is within ingredient
       return true;
     } else {
       return false;

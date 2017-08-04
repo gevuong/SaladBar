@@ -22,6 +22,8 @@ function setup() {
   bowl = new saladBowl();
   resetGame();
   img = loadImage("images/background.png");
+  image(img, 0, 0);
+  image(img, 0, height, img.width, img.height);
   // img.crossOrigin = "Anonymous";
 
   // let button = createButton("RESET GAME");
