@@ -26,7 +26,7 @@ With this Salad Bar simulator, users will be able to:
 
 In addition, this project will include:
 
-- [ ] A modal describing the rules of the game, with a start button, and a brief paragraph explaining the game.
+- [ ] Rules of the game, with a start button, and a brief paragraph explaining the game.
 - [ ] A production Readme
 
 

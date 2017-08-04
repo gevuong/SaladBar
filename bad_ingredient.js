@@ -2,7 +2,7 @@ function badIngredient() {
   // this.x = x;
   // this.y = y;
 
-  this.x = random(width);
+  this.x = random(width - 20);
   this.y = random(-500, -50);
   this.yspeed = random(2, 5);
 

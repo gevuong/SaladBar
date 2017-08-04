@@ -2,7 +2,7 @@ function goodIngredient() {
   // this.x = x;
   // this.y = y;
 
-  this.x = random(width);
+  this.x = random(width - 20);
   this.y = random(-500, -50);
   this.yspeed = random(2, 5);
 
@@ -13,7 +13,7 @@ function goodIngredient() {
     fill(100, 255, 100);
     // ellipse(this.x, this.y, this.r * 2, this.r * 2);
     // image(imgMushroom, this.x, this.y, 40, 40);
-    image(imgSpinach, this.x, this.y);
+    image(imgSpinach, this.x, this.y, 40, 40);
     image(imgTomato, this.x, this.y);
     // ellipse(this.x, this.y, this.r * 5, this.r * 1.5);
   };

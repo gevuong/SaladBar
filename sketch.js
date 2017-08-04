@@ -24,15 +24,15 @@ function setup() {
   img = loadImage("images/background.png");
   // img.crossOrigin = "Anonymous";
 
-  let button = createButton("RESET GAME");
-  button.mousePressed(resetGame);
+  // let button = createButton("RESET GAME");
+  // button.mousePressed(resetGame);
   // redraw();
   // loop();
-  noLoop();
+  // noLoop();
 }
 
 function resetGame() {
-  for (let i = 0; i < 6; i++) {
+  for (let i = 0; i < 8; i++) {
     goodIngredients[i] = new goodIngredient();
   }
 
@@ -40,7 +40,7 @@ function resetGame() {
     badIngredients[j] = new badIngredient();
   }
 
-  for (let k = 0; k < 2; k++) {
+  for (let k = 0; k < 1; k++) {
     specialIngredients[k] = new specialIngredient();
   }
 }
@@ -112,7 +112,10 @@ function draw() {
 
 function gameOver() {
   noLoop();
-
+  // if (keyCode === ENTER) {
+  //   console.log("ENTER");
+  //   setup();
+  // }
 }
 
 function keyReleased() {
@@ -127,7 +130,10 @@ function keyPressed() {
 
   if (keyCode === ENTER) {
     console.log("ENTER");
-    resetGame();
+    setup();
+    // resetGame();
+    // draw();
+    loop();
   }
   if (keyCode === RIGHT_ARROW) {
     bowl.setDir(1); // the idea is that bowl is always moving, but you're only setting direction when key is pressed
