@@ -10,9 +10,10 @@ function specialIngredient() {
   this.toDelete = false;
 
   this.show = function() {
-    fill(100, 100, 230);
+    // fill(100, 100, 230);
     // ellipse(this.x, this.y, this.r * 2, this.r * 2);
-    ellipse(this.x, this.y, this.r * 5, this.r * 1.5);
+    image(imgMushroom, this.x, this.y, 40, 40);
+    // ellipse(this.x, this.y, this.r * 5, this.r * 1.5);
   };
 
 
@@ -37,7 +38,9 @@ function specialIngredient() {
     this.y = this.y + 3; // - 1 moves drop up
 
     if (this.y > height) {
+      this.x = random(width);
       this.y = random(-500, -50);
+
     }
   };
 }

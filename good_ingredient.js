@@ -12,7 +12,9 @@ function goodIngredient() {
   this.show = function() {
     fill(100, 255, 100);
     // ellipse(this.x, this.y, this.r * 2, this.r * 2);
-    image(img, this.x, this.y);
+    // image(imgMushroom, this.x, this.y, 40, 40);
+    image(imgSpinach, this.x, this.y);
+    image(imgTomato, this.x, this.y);
     // ellipse(this.x, this.y, this.r * 5, this.r * 1.5);
   };
 

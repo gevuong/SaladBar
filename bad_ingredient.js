@@ -12,7 +12,10 @@ function badIngredient() {
   this.show = function() {
     fill(255, 100, 100);
     // ellipse(this.x, this.y, this.r * 2, this.r * 2);
-    ellipse(this.x, this.y, this.r * 5, this.r * 1.5);
+    image(imgPizza, this.x, this.y, 45, 45);
+    // image(imgTomato, this.x, this.y);
+    // image(imgSpinach, this.x, this.y);
+    // ellipse(this.x, this.y, this.r * 5, this.r * 1.5);
   };
 
   // this.fall = function() {
