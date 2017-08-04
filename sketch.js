@@ -26,8 +26,7 @@ function setup() {
 
   // let button = createButton("RESET GAME");
   // button.mousePressed(resetGame);
-  // redraw();
-  // loop();
+
   // noLoop();
 }
 

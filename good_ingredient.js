@@ -40,10 +40,11 @@ function goodIngredient() {
   };
 
   this.fall = function() {
-    this.y = this.y + 3; // - 1 moves drop up
-    console.log(height);
+    this.y = this.y + this.yspeed; // - 1 moves drop up
+    
     if (this.y > height) {
       this.y = random(-500, -50);
+      this.x = random(width);
     }
   };
 }

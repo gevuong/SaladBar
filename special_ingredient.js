@@ -16,7 +16,9 @@ function specialIngredient() {
     // ellipse(this.x, this.y, this.r * 5, this.r * 1.5);
   };
 
-
+  // this.fall = function() {
+  //   this.y = this.y + this.yspeed;
+  // }
   this.hits = function(ingredient) {
     // var d = dist(this.x, this.y, ingredient.x, ingredient.y);
     // console.log(d);
@@ -35,12 +37,11 @@ function specialIngredient() {
   };
 
   this.fall = function() {
-    this.y = this.y + 3; // - 1 moves drop up
+    this.y = this.y + this.yspeed; // - 1 moves drop up
 
     if (this.y > height) {
       this.x = random(width);
       this.y = random(-500, -50);
-
     }
   };
 }

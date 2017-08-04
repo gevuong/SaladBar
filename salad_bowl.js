@@ -25,7 +25,14 @@ function saladBowl () {
     this.height = 35;
   };
 
-  this.move = function(dir) {
+  this.move = function() {
+    console.log(this.x);
+    console.log(this.width);
+    if (this.x === this.width) {
+      this.x = this.xdir
+    } else if (this.x === 500 - this.width) {
+
+    }
     this.x += this.xdir * 3;
   };
 }
