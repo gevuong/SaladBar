@@ -1,13 +1,25 @@
-/*.canvas {
+body {
   display: flex;
-  justify-content: center;
-  align-items: center;
-}*/
+  justify-content: space-around;
+  background-color: #224400;
+}
 
 .game-rules-container {
-  color: #00BA0D;
-  border: black 2px solid;
+  color: #115511;
+  font-family: Helvetica, Arial, sans-serif;
+  background-color: #dddddd;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  max-width: 400px;
+}
+
+.hidden {
+  display: none;
+}
+
+#game-over {
+  position: absolute;
+  z-index: 100:
 }
