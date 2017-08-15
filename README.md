@@ -42,14 +42,16 @@ This project utilizes the following technologies:
 `special_ingredient.js`
 
 
-### Additional Resources
+### Additional Resources and References
 [p5 library](https://p5js.org/)
+[Daniel Shiffman from "Coding Challenge 5: Space Invaders in JavaScript with p5.js"] (https://www.youtube.com/watch?v=biN3v3ef-Y0)
+
 
 ### Future Direction
 Some anticipated updates are:
 
 - [ ] Add a timer and/or different stages
-- [ ] Incorporate nutrition to score count per ingredient
+- [ ] Incorporate score count per ingredient (nutritional value)
 - [ ] Diversify falling ingredients
 - [ ] User has ability to select a salad type
 - [ ] Add calorie count as health bar

@@ -26,8 +26,6 @@ function setup() {
   image(img, 0, height, img.width, img.height);
   // img.crossOrigin = "Anonymous";
 
-  // let button = createButton("RESET GAME");
-  // button.mousePressed(resetGame);
   let elem = document.getElementById('start-game');
   elem.classList.remove("hidden");
   noLoop();
@@ -49,7 +47,6 @@ function resetGame() {
 
 // fcn is always being called
 function draw() {
-  // background(51);
   image(img, 0, 0);
   image(img, 0, height, img.width, img.height);
   bowl.show();
@@ -69,7 +66,6 @@ function draw() {
 
       let elem = document.getElementById('you-win');
       elem.classList.remove("hidden");
-      console.log("YOU WIN!");
     }
 
   }
@@ -78,10 +74,7 @@ function draw() {
     badIngredients[j].show();
     badIngredients[j].fall();
     if (badIngredients[j].hits(bowl)) {
-      gameOver(); // which resets game
-      console.log("GAME OVER");
-      // let button = createButton("RESET GAME");
-      // button.mousePressed(resetGame);
+      gameOver(); // resets game
       let elem = document.getElementById('you-lose');
       elem.classList.remove("hidden");
     }
@@ -119,10 +112,6 @@ function draw() {
 
 function gameOver() {
   noLoop();
-  // if (keyCode === ENTER) {
-  //   console.log("ENTER");
-  //   setup();
-  // }
 }
 
 function keyReleased() {
@@ -130,14 +119,7 @@ function keyReleased() {
 }
 
 function keyPressed() {
-  // if (key === " ") {
-  //   var drop = new Drop(ingredient.x, ingredient.y); // height is bottom of the screen
-  //   goodIngredients.push(drop);
-  // }
-
   if (key === " ") {
-    console.log("SPACEBAR");
-
     setup();
     let startGame = document.getElementById('start-game');
     startGame.classList.add("hidden");
