@@ -44,7 +44,8 @@ This project utilizes the following technologies:
 
 ### Additional Resources and References
 [p5 library](https://p5js.org/)
-[Daniel Shiffman from "Coding Challenge 5: Space Invaders in JavaScript with p5.js"] (https://www.youtube.com/watch?v=biN3v3ef-Y0)
+
+[Daniel Shiffman from Coding Challenge 5: Space Invaders in JavaScript with p5.js](https://www.youtube.com/watch?v=biN3v3ef-Y0)
 
 
 ### Future Direction
