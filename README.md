@@ -13,14 +13,14 @@ As more salad ingredients are collected, the capacity of the salad bowl increase
 
 With the Salad Bar simulator, users are able to:
 
-- [ ] Start and reset the game
-- [ ] Move salad bowl horizontally from one side of map to the other
-- [ ] Catch falling salad ingredients in salad bowl, and dodge non-salad ingredients
-- [ ] Bowl enlarges as you collects more ingredients
+- [x] Start and reset the game
+- [x] Move salad bowl horizontally from one side of map to the other
+- [x] Catch falling salad ingredients in salad bowl, and dodge non-salad ingredients
+- [x] Bowl enlarges as you collects more ingredients
 
 
 ### Game User Interface
-![wireframes](images/UI.png)
+![wireframes](images/saladbar.gif)
 
 
 ### Architecture and Technologies
